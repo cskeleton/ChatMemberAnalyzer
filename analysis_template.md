@@ -1,0 +1,173 @@
+# 微信群聊用户画像分析模板
+
+## 分析提示词（发送给API）
+
+### 角色设定
+
+你是一位专业的社交行为分析师，擅长从微信群聊记录中提取用户画像特征。请基于提供的聊天记录，对指定用户进行深度分析。
+
+### 分析维度
+
+请从以下维度分析用户特征：
+
+1. **情绪与沟通风格**
+   - 正向/负向情绪占比
+   - 情绪波动程度
+   - 常用语气（理性、随意、幽默、强势、被动等）
+   - 语言风格（简短、冗长、专业、感性）
+   - 表情包/语气词使用偏好
+
+2. **话题偏好与兴趣**
+   - 讨论频率最高的话题类别
+   - 内容主题（工作、数码、生活、家庭、投资、吐槽等）
+   - 典型关键词
+   - 专长或热衷的议题
+
+3. **角色特征**
+   - 判断群内角色（组织者/氛围担当/信息提供者/倾听者/技术专家等）
+   - 主动vs被动（发起话题占比、接话占比）
+   - 是否会安慰/支持他人、是否会抱怨
+
+4. **专业领域推断**
+   - 是否表现出专业技能（IT、医疗、工程、金融、教育等）
+   - 是否输出专业建议
+   - 相关术语的使用习惯
+
+### 输出格式要求
+
+请以JSON格式返回分析结果：
+
+```json
+{
+  "emotion_analysis": {
+    "positive_ratio": "正向情绪占比（0-100）",
+    "negative_ratio": "负向情绪占比（0-100）",
+    "volatility": "情绪波动程度（低/中/高）",
+    "dominant_tone": "主要语气特征"
+  },
+  "communication_style": {
+    "style_tags": ["标签1", "标签2"],
+    "language_pattern": "语言风格描述",
+    "emoji_usage": "表情使用偏好描述"
+  },
+  "topic_interests": {
+    "main_topics": ["话题1", "话题2"],
+    "keywords": ["关键词1", "关键词2"],
+    "interest_description": "兴趣描述"
+  },
+  "role_analysis": {
+    "group_role": "群内角色",
+    "initiative_level": "主动程度（主动/被动/均衡）",
+    "social_behavior": "社交行为描述"
+  },
+  "professional_inference": {
+    "possible_fields": ["可能领域1", "可能领域2"],
+    "expertise_indicators": "专业能力指标描述",
+    "confidence": "推断置信度（低/中/高）"
+  },
+  "summary": "一句话总结该用户特征"
+}
+```
+
+### 注意事项
+
+- 所有分析必须基于聊天记录本身，避免臆测
+- 若信息不足，请标注为"信息不足"
+- 非文本消息（图片/视频等）请分析其社交意义
+
+---
+
+## 报告输出模板
+
+### 群整体信息
+
+- **群名称**: {group_name}
+- **分析时间范围**: {time_range}
+- **总消息数**: {total_messages}
+- **成员数**: {member_count}
+- **分析生成时间**: {analysis_time}
+
+---
+
+### 成员画像
+
+#### 👤 {display_name}（{username}）
+
+##### 📊 基础统计
+
+| 指标 | 数值 |
+|------|------|
+| 发言总数 | {message_count} 条 |
+| 平均消息长度 | {avg_length} 字 |
+| 消息占比 | {message_ratio}% |
+| 活跃时段 | {active_hours} |
+| 最活跃日期 | {most_active_date} |
+
+##### 📱 消息类型分布
+
+| 类型 | 数量 | 占比 |
+|------|------|------|
+| 文本消息 | {text_count} | {text_ratio}% |
+| 图片消息 | {image_count} | {image_ratio}% |
+| 视频消息 | {video_count} | {video_ratio}% |
+| 语音消息 | {voice_count} | {voice_ratio}% |
+| 其他 | {other_count} | {other_ratio}% |
+
+##### 🎭 情绪与沟通风格
+
+- **情绪倾向**: 正向 {positive_ratio}% / 负向 {negative_ratio}%
+- **情绪波动**: {volatility}
+- **语气特征**: {dominant_tone}
+- **语言风格**: {language_pattern}
+- **表情偏好**: {emoji_usage}
+
+##### 💡 兴趣与话题
+
+- **主要话题**: {main_topics}
+- **典型关键词**: {keywords}
+- **兴趣描述**: {interest_description}
+
+##### 🎯 角色定位
+
+- **群内角色**: {group_role}
+- **主动程度**: {initiative_level}
+- **社交行为**: {social_behavior}
+
+##### 🔧 专业领域
+
+- **可能领域**: {possible_fields}
+- **专业指标**: {expertise_indicators}
+- **推断置信度**: {confidence}
+
+##### 🏷️ 用户标签
+
+{user_tags}
+
+##### 📝 综合评价
+
+{summary}
+
+---
+
+### 社交关系网络
+
+#### 互动矩阵
+
+{interaction_matrix}
+
+#### 核心成员
+
+{core_members}
+
+#### 边缘成员
+
+{peripheral_members}
+
+---
+
+### 分析说明
+
+- 本报告基于导出的微信聊天记录自动生成
+- 语义分析部分由AI模型完成，结果仅供参考
+- 量化指标为本地统计结果，数据准确
+
