@@ -1,0 +1,75 @@
+.about-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.about-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.about-header h2 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.about-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.about-section {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.about-section a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+.warning-text {
+    color: #ea580c;
+    /* Orange/Red for warning */
+    font-weight: 500;
+}
+
+.about-section strong {
+    color: #0f172a;
+}

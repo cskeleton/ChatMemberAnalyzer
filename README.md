@@ -1,3 +1,15 @@
+# WeChat Chat Analyzer
+
+## WebGUI Version (Recommended)
+A modern, browser-based version is available in the `web-gui` directory.
+
+### Quick Start
+1. Navigate to the directory: `cd web-gui`
+2. Install dependencies: `npm install`
+3. Start the dev server: `npm run dev`
+4. Open the browser at the shown URL (usually http://localhost:5173)
+
+## Python Version (Legacy)
 # 群友成分检测器
 
 ## 消息导出

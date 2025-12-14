@@ -1,0 +1,315 @@
+.member-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.back-btn:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.detail-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.stats-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-row strong {
+    color: #1e293b;
+}
+
+.ai-card {
+    min-height: 400px;
+}
+
+.ai-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+}
+
+.analyze-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.analyze-btn:hover {
+    background: #2563eb;
+}
+
+.download-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #059669;
+}
+
+.console-log {
+    background: #0f172a;
+    color: #22c55e;
+    font-family: monospace;
+    padding: 1rem;
+    border-radius: 6px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 0.875rem;
+}
+
+.report-content {
+    line-height: 1.7;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Markdown 渲染样式 */
+.markdown-body {
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.markdown-body h1 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-body h2 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.4rem;
+}
+
+.markdown-body h3 {
+    font-size: 1.05rem;
+    color: #334155;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.markdown-body h4 {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.markdown-body h5 {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 0.75rem;
+    margin-bottom: 0.3rem;
+}
+
+.markdown-body p {
+    margin: 0.5rem 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.markdown-body li {
+    margin: 0.25rem 0;
+}
+
+.markdown-body strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.markdown-body code {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-family: 'SF Mono', Monaco, Consolas, monospace;
+}
+
+.markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    font-size: 0.85rem;
+}
+
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+.markdown-body th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #475569;
+}
+
+.markdown-body tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.markdown-body hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 1.5rem 0;
+}
+
+.markdown-body em {
+    color: #64748b;
+    font-style: italic;
+}
+
+/* 下载按钮样式更新 */
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #059669;
+}
+
+/* 滚动条样式 */
+.report-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.report-content::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.report-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.report-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

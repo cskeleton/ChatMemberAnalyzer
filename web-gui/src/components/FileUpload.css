@@ -1,0 +1,41 @@
+.upload-container {
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upload-icon {
+  color: #94a3b8;
+}
+
+.upload-container:hover .upload-icon {
+  color: #3b82f6;
+}
+
+h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
