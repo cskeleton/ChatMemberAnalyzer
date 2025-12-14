@@ -3,9 +3,10 @@
 ## 消息导出
 使用[ycccccccy/echotrace](https://github.com/ycccccccy/echotrace)导出群聊消息。
 
-## 填入必要信息
-在`analyze_chat.py`中填入必要的 API 信息。修改文件开头的相关参数，运行即可。具体看代码注释描述。
-如果某一个群友的消息太多，就对消息进行了抽样。`count_messages.py`可以帮助你分析数据的大致情况。然后根据实际情况修改`analyze_chat.py`中的参数。
+## 直接使用
+下载dist目录中的exe直接运行即可。可以不选择任何模板，使用项目默认的模板进行分析。提示词模板和报告模板可以参考项目中的test模板进行编写，注意提示词和报告中的变量保持一致。
 
-## 分析结果
-为了节省token，切片和分析的数据会被暂存在 `temp`，输出的结果在 `results`。
+## 自行构建
+1. 下载代码
+2. 安装依赖
+3. `pyinstaller --noconfirm --onefile --windowed --name "ChatMemberAnalyzer" --clean gui_app.py`
